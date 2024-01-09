@@ -9,8 +9,11 @@ void main() {
         appBar: AppBar(
           title: const Text('Gmail'),
         ),
-        body: const Center(
-          child: Text('Salut'),
+        body: TextButton(
+          onPressed: () => print('Clik me'),
+          child: const Center(
+            child: Text('Click me'),
+          ),
         ),
         drawer: Drawer(
           child: ListView(
@@ -53,6 +56,11 @@ void main() {
             BottomNavigationBarItem(label: 'Accueil', icon: Icon(Icons.home)),
             BottomNavigationBarItem(label: 'Profil', icon: Icon(Icons.person)),
           ],
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () => print('click'),
+          icon: const Icon(Icons.add),
+          label: const Text('Nouveau message'),
         ),
       ),
       debugShowCheckedModeBanner: false,
