@@ -6,6 +6,9 @@ void main() {
       title: 'TP1',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Gmail'),
+        ),
         body: const Center(
           child: Text('Salut'),
         ),
@@ -13,7 +16,7 @@ void main() {
           child: ListView(
             children: [
               DrawerHeader(
-                decoration: BoxDecoration(color: Colors.blue),
+                decoration: const BoxDecoration(color: Colors.blue),
                 child: Center(
                     child: Column(
                   children: [
@@ -50,7 +53,6 @@ void main() {
             BottomNavigationBarItem(label: 'Accueil', icon: Icon(Icons.home)),
             BottomNavigationBarItem(label: 'Profil', icon: Icon(Icons.person)),
           ],
-          backgroundColor: Colors.blue,
         ),
       ),
       debugShowCheckedModeBanner: false,
